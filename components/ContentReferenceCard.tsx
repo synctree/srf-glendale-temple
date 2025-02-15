@@ -12,11 +12,13 @@ interface ContentReferenceCardProps {
    */
   variant: ContentVariant;
   /**
-   * The URL or path to the content
-   * If it includes a scheme (http:// or https://), it's treated as external
-   * If it's a path only, it's treated as internal
+   * The URL for the external content (will show QR code)
    */
-  href: string;
+  externalHref?: string;
+  /**
+   * The URL for internal navigation (makes card clickable)
+   */
+  internalHref?: string;
   /**
    * The title of the external resource
    */
@@ -47,7 +49,8 @@ interface ContentReferenceCardProps {
 
 export function ContentReferenceCard({
   variant,
-  href,
+  externalHref,
+  internalHref,
   title,
   description,
   imageUrl,
@@ -55,7 +58,6 @@ export function ContentReferenceCard({
   qrSize,
   children
 }: ContentReferenceCardProps) {
-  const isExternal = href.startsWith('http://') || href.startsWith('https://');
   const isReference = variant === 'reference';
   const defaultQrSize = isReference ? 300 : 200;
   const containerWidth = isReference ? '1200px' : '800px';
@@ -67,53 +69,52 @@ export function ContentReferenceCard({
   const qrContainerPadding = isReference ? 'p-12' : 'p-8';
   const contentGap = isReference ? 'mb-6' : 'mb-4';
 
-  return (
-    <div className={`bg-white rounded-xl shadow-lg overflow-hidden ${!isExternal ? 'cursor-pointer' : ''}`}
-         style={{ width: containerWidth, height: containerHeight }}>
-      {isExternal ? (
-        <div className={`flex ${qrPosition === 'right' ? 'flex-row' : 'flex-row-reverse'} h-full`}>
-          <div className={`flex-1 ${contentPadding} flex flex-col justify-between`}
-               style={{ 
-                 backgroundImage: `url(${imageUrl})`,
-                 backgroundSize: 'cover',
-                 backgroundPosition: 'center'
-               }}>
-          <div className="bg-black bg-opacity-50 p-8 rounded-lg">
-            <h3 className={`${titleSize} font-bold text-white ${contentGap}`}>{title}</h3>
-            <p className={`${descriptionSize} text-white ${children ? contentGap : ''}`}>{description}</p>
-            {children}
-          </div>
-          </div>
-          
-          <div className="w-1/3 flex items-center justify-center" style={{ backgroundColor: '#052957' }}>
-            <div className={`text-center ${qrContainerPadding}`}>
-              <QRCode 
-                value={href}
-                size={qrSize || defaultQrSize}
-                className={contentGap}
-              />
-              <p className={`${qrTextSize} text-white`}>Scan to view on your device</p>
-            </div>
+  const ContentDisplay = () => (
+    <div className={`flex ${externalHref ? (qrPosition === 'right' ? 'flex-row' : 'flex-row-reverse') : ''} h-full`}>
+      <div 
+        className={`${externalHref ? 'flex-1' : 'w-full'} ${contentPadding} flex flex-col justify-between`}
+        style={{ 
+          backgroundImage: `url(${imageUrl})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <div className="bg-black bg-opacity-50 p-8 rounded-lg">
+          <h3 className={`${titleSize} font-bold text-white ${contentGap}`}>{title}</h3>
+          <p className={`${descriptionSize} text-white ${children ? contentGap : ''}`}>{description}</p>
+          {children}
+        </div>
+      </div>
+      
+      {externalHref && (
+        <div className="w-1/3 flex items-center justify-center" style={{ backgroundColor: '#052957' }}>
+          <div className={`text-center ${qrContainerPadding}`}>
+            <QRCode 
+              value={externalHref}
+              size={qrSize || defaultQrSize}
+              className={contentGap}
+            />
+            <p className={`${qrTextSize} text-white`}>Scan to view on your device</p>
           </div>
         </div>
-      ) : (
-        <Link href={href} className="block h-full">
-          <div className="flex h-full">
-            <div className={`flex-1 ${contentPadding} flex flex-col justify-between`}
-                 style={{ 
-                   backgroundImage: `url(${imageUrl})`,
-                   backgroundSize: 'cover',
-                   backgroundPosition: 'center'
-                 }}>
-              <div className="bg-black bg-opacity-50 p-8 rounded-lg">
-                <h3 className={`${titleSize} font-bold text-white ${contentGap}`}>{title}</h3>
-                <p className={`${descriptionSize} text-white ${children ? contentGap : ''}`}>{description}</p>
-                {children}
-              </div>
-            </div>
-          </div>
-        </Link>
       )}
+    </div>
+  );
+
+  return (
+    <div 
+      className="bg-white rounded-xl shadow-lg overflow-hidden"
+      style={{ width: containerWidth, height: containerHeight }}
+    >
+      <div className={internalHref ? 'cursor-pointer' : ''}>
+        {internalHref ? (
+          <Link href={internalHref} className="block">
+            <ContentDisplay />
+          </Link>
+        ) : (
+          <ContentDisplay />
+        )}
+      </div>
     </div>
   );
 }

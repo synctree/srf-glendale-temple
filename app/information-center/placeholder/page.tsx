@@ -18,7 +18,7 @@ export default function PlaceholderPage() {
         <div className="flex gap-12 overflow-x-auto pb-8">
           <ContentReferenceCard 
             variant="card"
-            href="https://www.youtube.com/watch?v=fBNz5xF-Kx4"
+            externalHref="https://www.youtube.com/watch?v=fBNz5xF-Kx4"
             title="Awake: The Life of Yogananda"
             description="Witness the great yogi's own journey to enlightenment, and the challenges and victories along the way."
             imageUrl="/yogananda-awake.jpg"
@@ -28,7 +28,7 @@ export default function PlaceholderPage() {
           
           <ContentReferenceCard
             variant="reference"
-            href="https://yogananda.org/meditation"
+            externalHref="https://yogananda.org/meditation"
             title="Learn to Meditate"
             description="Discover ancient meditation techniques taught by Paramahansa Yogananda"
             imageUrl="/yogananda-awake.jpg"
@@ -47,7 +47,7 @@ export default function PlaceholderPage() {
 
           <ContentReferenceCard
             variant="reference"
-            href="/information-center/pages/convocation"
+            internalHref="/information-center/pages/convocation"
             title="SRF World Convocation 2025"
             description="Join thousands of spiritual seekers from around the world for a week of spiritual renewal - June 22-28, 2025"
             imageUrl="https://yogananda.org/craft-public-storage/_1440xAUTO_crop_center-center_90_none/Convocation-Overview-Brother-Bhumananda.jpg"
@@ -66,7 +66,7 @@ export default function PlaceholderPage() {
 
           <ContentReferenceCard
             variant="card"
-            href="/information-center/pages/sample"
+            internalHref="/information-center/pages/sample"
             title="Meditation Techniques"
             description="Learn about the meditation techniques taught in Self-Realization Fellowship"
             imageUrl="/yogananda-awake.jpg"
