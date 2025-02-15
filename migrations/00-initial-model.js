@@ -15,7 +15,7 @@ module.exports = function (migration) {
     .type('Symbol')
     .required(true);
 
-  author.createField('picture')
+  author.editField('picture')
     .name('Picture')
     .type('Link')
     .linkType('Asset')
@@ -37,24 +37,24 @@ module.exports = function (migration) {
     .type('Symbol')
     .required(true);
 
-  post.createField('slug')
+  post.editField('slug')
     .name('Slug')
     .type('Symbol')
     .required(true)
     .validations([{ "unique": true }]);
 
-  post.createField('coverImage')
+  post.editField('coverImage')
     .name('Cover Image')
     .type('Link')
     .linkType('Asset')
     .required(true);
 
-  post.createField('date')
+  post.editField('date')
     .name('Date')
     .type('Date')
     .required(true);
 
-  post.createField('author')
+  post.editField('author')
     .name('Author')
     .type('Link')
     .linkType('Entry')
@@ -64,11 +64,11 @@ module.exports = function (migration) {
       }
     ]);
 
-  post.createField('excerpt')
+  post.editField('excerpt')
     .name('Excerpt')
     .type('Text');
 
-  post.createField('content')
+  post.editField('content')
     .name('Content')
     .type('RichText');
 }
