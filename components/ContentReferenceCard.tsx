@@ -72,17 +72,19 @@ export function ContentReferenceCard({
   const ContentDisplay = () => (
     <div className={`flex ${externalHref ? (qrPosition === 'right' ? 'flex-row' : 'flex-row-reverse') : ''} h-full`}>
       <div 
-        className={`${externalHref ? 'flex-1' : 'w-full'} ${contentPadding} flex flex-col justify-between`}
+        className={`${externalHref ? 'flex-1' : 'w-full'} h-full`}
         style={{ 
           backgroundImage: `url(${imageUrl})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
       >
-        <div className="bg-black bg-opacity-50 p-8 rounded-lg">
+        <div className={`h-full ${contentPadding} flex flex-col justify-between`}>
+          <div className="bg-black bg-opacity-50 p-8 rounded-lg">
           <h3 className={`${titleSize} font-bold text-white ${contentGap}`}>{title}</h3>
           <p className={`${descriptionSize} text-white ${children ? contentGap : ''}`}>{description}</p>
           {children}
+          </div>
         </div>
       </div>
       
