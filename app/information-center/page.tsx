@@ -36,10 +36,10 @@ export default function InformationCenter() {
 
         <div className="flex justify-center mt-8">
           <ExternalLink 
-            url="https://yogananda.org"
-            title="Learn More About SRF"
-            description="Explore the teachings of Paramahansa Yogananda on our main website"
-            imageUrl="/placeholder-temple.jpg"
+            url="https://www.youtube.com/watch?v=fBNz5xF-Kx4"
+            title="Awake: The Life of Yogananda"
+            description="Witness the great yogi's own journey to enlightenment, and the challenges and victories along the way."
+            imageUrl="/yogananda-awake.jpg"
             qrPosition="right"
             qrSize={200}
           />

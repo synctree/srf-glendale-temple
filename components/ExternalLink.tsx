@@ -52,14 +52,14 @@ export function ExternalLink({
           </div>
         </div>
         
-        <div className="w-1/3 bg-gray-50 flex items-center justify-center p-8">
+        <div className="w-1/3 flex items-center justify-center p-8" style={{ backgroundColor: '#052957' }}>
           <div className="text-center">
             <QRCode 
               value={url}
               size={qrSize}
               className="mb-4"
             />
-            <p className="text-xl text-gray-600">Scan to view on your device</p>
+            <p className="text-xl text-white">Scan to view on your device</p>
           </div>
         </div>
       </div>
