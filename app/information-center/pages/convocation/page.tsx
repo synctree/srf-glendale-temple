@@ -8,7 +8,8 @@ export default function ConvocationPage() {
         backgroundColor="#052957"
         imageUrl="https://yogananda.org/craft-public-storage/_1440xAUTO_crop_center-center_90_none/Convocation-Overview-Brother-Bhumananda.jpg"
         imageOnLeft={false}
-        href="https://yogananda.org/srf-world-convocation-overview"
+        externalHref="https://yogananda.org/srf-world-convocation-overview"
+        internalHref="/information-center/pages/convocation"
       >
         <div className="text-white">
           <h1 className="text-6xl font-bold mb-8">

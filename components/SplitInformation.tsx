@@ -18,7 +18,8 @@ interface SplitInformationProps {
   /**
    * Optional href for making the image side clickable
    */
-  href?: string;
+  externalHref?: string;
+  internalHref?: string;
   /**
    * Optional call to action text for QR code
    * @default "Scan to learn more"
@@ -38,7 +39,8 @@ export function SplitInformation({
   backgroundColor,
   imageUrl,
   imageOnLeft = false,
-  href,
+  externalHref,
+  internalHref,
   qrCallToAction = "View on your mobile device",
   children
 }: SplitInformationProps) {
@@ -66,10 +68,13 @@ export function SplitInformation({
           backgroundPosition: 'center'
         }}
       >
-        {href && isExternalUrl(href) && (
+        {internalHref && (
+          <Link href={internalHref} className="absolute inset-0" />
+        )}
+        {externalHref && (
           <div className={`absolute top-8 ${imageOnLeft ? 'left-8' : 'right-8'} flex flex-col items-center`}>
             <QRCode 
-              value={href}
+              value={externalHref}
               size={300}
               className="mb-4"
             />

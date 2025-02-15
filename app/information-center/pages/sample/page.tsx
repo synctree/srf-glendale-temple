@@ -8,7 +8,8 @@ export default function SamplePage() {
         backgroundColor="#052957"
         imageUrl="/yogananda-awake.jpg"
         imageOnLeft={true}
-        href="https://yogananda.org/meditation"
+        externalHref="https://yogananda.org/meditation"
+        internalHref="/information-center/pages/sample"
       >
         <div className="text-white">
           <h1 className="text-6xl font-bold mb-8">
