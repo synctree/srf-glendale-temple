@@ -10,7 +10,7 @@ export function InformationCenterFooter() {
           className="h-16 w-16"
         />
       </Link>
-      <p className="text-xl text-white">Touch to return home</p>
+      <p className="text-3xl text-white">Touch to return home</p>
     </footer>
   );
 }
