@@ -1,4 +1,4 @@
-import { ExternalLink } from '@/components/ExternalLink'
+import { ExternalLinkCard } from '@/components/ExternalLink'
 import Link from 'next/link'
 
 export default function InformationCenter() {
@@ -35,7 +35,7 @@ export default function InformationCenter() {
         </div>
 
         <div className="flex justify-center mt-8">
-          <ExternalLink 
+          <ExternalLinkCard 
             url="https://www.youtube.com/watch?v=fBNz5xF-Kx4"
             title="Awake: The Life of Yogananda"
             description="Witness the great yogi's own journey to enlightenment, and the challenges and victories along the way."

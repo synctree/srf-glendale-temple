@@ -1,6 +1,6 @@
 import QRCode from './QRCode';
 
-interface ExternalLinkProps {
+interface ExternalLinkCardProps {
   /**
    * The URL to encode in the QR code
    */
@@ -29,7 +29,7 @@ interface ExternalLinkProps {
   qrSize?: number;
 }
 
-export function ExternalLink({
+export function ExternalLinkCard({
   url,
   title,
   description,
