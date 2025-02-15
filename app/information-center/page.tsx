@@ -4,15 +4,22 @@ import Link from 'next/link'
 
 export default function InformationCenter() {
   return (
-    <div className="fixed inset-0 bg-gray-100 overflow-hidden" style={{ width: '3840px', height: '2160px' }}>
-      <header className="p-12 flex items-center justify-center gap-8">
-        <img 
-          src="/srf-logo-wide.png" 
-          alt="Self-Realization Fellowship Logo" 
-          className="h-32 w-auto"
-        />
-        <h1 className="text-6xl font-bold">
-          SRF Glendale Temple Information Center
+    <div className="fixed inset-0 bg-white overflow-hidden" style={{ width: '3840px', height: '2160px' }}>
+      <header className="p-12">
+        <div className="flex items-center justify-center gap-8 mb-8">
+          <img 
+            src="/srf-logo.png" 
+            alt="Self-Realization Fellowship Logo" 
+            className="h-32 w-32"
+          />
+          <img 
+            src="/srf-logo-wide.png" 
+            alt="Self-Realization Fellowship Logo Text" 
+            className="h-24 w-auto"
+          />
+        </div>
+        <h1 className="text-6xl font-bold text-center">
+          Glendale Temple Information Center
         </h1>
       </header>
 
