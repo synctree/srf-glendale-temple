@@ -3,7 +3,7 @@ import { InformationCenterFooter } from '@/components/InformationCenterFooter';
 
 export default function ConvocationPage() {
   return (
-    <div className="fixed inset-0 bg-white overflow-hidden" style={{ width: '3840px', height: '2160px' }}>
+    <div className="fixed inset-0 bg-white overflow-hidden select-none" style={{ width: '3840px', height: '2160px' }}>
       <SplitInformation
         backgroundColor="#052957"
         imageUrl="https://yogananda.org/craft-public-storage/_1440xAUTO_crop_center-center_90_none/Convocation-Overview-Brother-Bhumananda.jpg"

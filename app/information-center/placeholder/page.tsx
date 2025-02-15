@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function PlaceholderPage() {
   return (
-    <div className="fixed inset-0 bg-white overflow-hidden" style={{ width: '3840px', height: '2160px' }}>
+    <div className="fixed inset-0 bg-white overflow-hidden select-none" style={{ width: '3840px', height: '2160px' }}>
       <header className="p-12">
         <div className="flex justify-center">
           <img 
