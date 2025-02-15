@@ -2,8 +2,6 @@ import { ExternalLinkCard } from '@/components/ExternalLinkCard'
 import { ExternalReference } from '@/components/ExternalReference'
 import Link from 'next/link'
 
-import Link from 'next/link'
-
 export default function InformationCenter() {
   return (
     <div className="fixed inset-0 bg-white overflow-hidden" style={{ width: '3840px', height: '2160px' }}>
