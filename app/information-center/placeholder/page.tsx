@@ -87,7 +87,7 @@ export default function PlaceholderPage() {
             className="h-16 w-16"
           />
         </Link>
-        <p className="text-xl">Touch anywhere to begin exploring</p>
+        <p className="text-3xl">Touch anywhere to begin exploring</p>
       </footer>
     </div>
   )
