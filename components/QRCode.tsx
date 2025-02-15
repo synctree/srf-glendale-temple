@@ -45,7 +45,7 @@ export default function QRCode({
   className,
 }: QRCodeProps) {
   return (
-    <div className={className}>
+    <div className={`rounded-2xl overflow-hidden bg-white ${className}`}>
       <QRCodeSVG
         value={value}
         size={size}
