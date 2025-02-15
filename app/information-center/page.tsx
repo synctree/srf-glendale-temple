@@ -1,4 +1,5 @@
-import { ExternalLinkCard } from '@/components/ExternalLink'
+import { ExternalLinkCard } from '@/components/ExternalLinkCard'
+import { ExternalReference } from '@/components/ExternalReference'
 import Link from 'next/link'
 
 export default function InformationCenter() {
@@ -34,7 +35,7 @@ export default function InformationCenter() {
           </section>
         </div>
 
-        <div className="flex justify-center mt-8">
+        <div className="flex flex-col gap-12 items-center mt-8">
           <ExternalLinkCard 
             url="https://www.youtube.com/watch?v=fBNz5xF-Kx4"
             title="Awake: The Life of Yogananda"
@@ -43,6 +44,24 @@ export default function InformationCenter() {
             qrPosition="right"
             qrSize={200}
           />
+          
+          <ExternalReference
+            url="https://yogananda.org/meditation"
+            title="Learn to Meditate"
+            description="Discover ancient meditation techniques taught by Paramahansa Yogananda"
+            imageUrl="/yogananda-awake.jpg"
+            qrPosition="left"
+            qrSize={300}
+          >
+            <div className="flex flex-col gap-4">
+              <p className="text-2xl text-white">
+                "The soul loves to meditate, for in contact with the Spirit lies its greatest joy."
+              </p>
+              <p className="text-xl text-white italic">
+                — Paramahansa Yogananda
+              </p>
+            </div>
+          </ExternalReference>
         </div>
       </main>
 
