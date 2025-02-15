@@ -5,16 +5,13 @@ export default function PlaceholderPage() {
   return (
     <div className="fixed inset-0 bg-white overflow-hidden" style={{ width: '3840px', height: '2160px' }}>
       <header className="p-12">
-        <div className="flex justify-center mb-16">
+        <div className="flex justify-center">
           <img 
             src="/srf-logo-wide.png" 
             alt="Self-Realization Fellowship Logo" 
             className="h-[800px] w-auto"
           />
         </div>
-        <h1 className="text-6xl font-bold text-center">
-          Glendale Temple
-        </h1>
       </header>
 
       <main className="p-12">
