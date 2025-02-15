@@ -7,7 +7,7 @@ export default function SamplePage() {
       <SplitInformation
         backgroundColor="#052957"
         imageUrl="/yogananda-awake.jpg"
-        imageOnLeft={false}
+        imageOnLeft={true}
         href="https://yogananda.org/meditation"
       >
         <div className="text-white">
