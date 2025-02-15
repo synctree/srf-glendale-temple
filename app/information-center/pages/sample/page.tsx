@@ -1,9 +1,11 @@
 import { SplitInformation } from '@/components/SplitInformation';
 import { InformationCenterFooter } from '@/components/InformationCenterFooter';
+import { CustomCursor } from '@/components/CustomCursor';
 
 export default function SamplePage() {
   return (
-    <div className="fixed inset-0 bg-white overflow-hidden select-none" style={{ width: '3840px', height: '2160px' }}>
+    <div className="fixed inset-0 bg-white overflow-hidden select-none cursor-none" style={{ width: '3840px', height: '2160px' }}>
+      <CustomCursor />
       <SplitInformation
         backgroundColor="#052957"
         imageUrl="/yogananda-awake.jpg"

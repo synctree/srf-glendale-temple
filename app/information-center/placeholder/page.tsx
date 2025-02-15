@@ -1,9 +1,11 @@
 import { ContentReferenceCard } from '@/components/ContentReferenceCard'
 import Link from 'next/link'
+import { CustomCursor } from '@/components/CustomCursor'
 
 export default function PlaceholderPage() {
   return (
-    <div className="fixed inset-0 bg-white overflow-hidden select-none" style={{ width: '3840px', height: '2160px' }}>
+    <div className="fixed inset-0 bg-white overflow-hidden select-none cursor-none" style={{ width: '3840px', height: '2160px' }}>
+      <CustomCursor />
       <header className="p-12">
         <div className="flex justify-center">
           <img 
