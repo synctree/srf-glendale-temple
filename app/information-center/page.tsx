@@ -5,8 +5,13 @@ import Link from 'next/link'
 export default function InformationCenter() {
   return (
     <div className="fixed inset-0 bg-gray-100 overflow-hidden" style={{ width: '3840px', height: '2160px' }}>
-      <header className="p-12">
-        <h1 className="text-6xl font-bold text-center">
+      <header className="p-12 flex items-center justify-center gap-8">
+        <img 
+          src="/srf-logo.png" 
+          alt="Self-Realization Fellowship Logo" 
+          className="h-32 w-32"
+        />
+        <h1 className="text-6xl font-bold">
           SRF Glendale Temple Information Center
         </h1>
       </header>
