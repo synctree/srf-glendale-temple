@@ -67,13 +67,13 @@ export function SplitInformation({
         }}
       >
         {href && isExternalUrl(href) && (
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center">
+          <div className="absolute bottom-8 left-8 flex flex-col items-center">
             <QRCode 
               value={href}
-              size={400}
-              className="mb-8"
+              size={300}
+              className="mb-4"
             />
-            <p className="text-white text-3xl font-semibold">{qrCallToAction}</p>
+            <p className="text-white text-2xl font-semibold drop-shadow-lg">{qrCallToAction}</p>
           </div>
         )}
       </div>
