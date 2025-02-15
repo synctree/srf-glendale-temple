@@ -67,7 +67,7 @@ export function SplitInformation({
         }}
       >
         {href && isExternalUrl(href) && (
-          <div className="absolute bottom-8 left-8 flex flex-col items-center">
+          <div className="absolute top-8 left-8 flex flex-col items-center">
             <QRCode 
               value={href}
               size={300}
