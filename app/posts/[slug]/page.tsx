@@ -18,13 +18,12 @@ export async function generateStaticParams() {
 }
 
 type Props = {
-  params: { slug: string }
-  searchParams?: { [key: string]: string | string[] | undefined }
-}
+  params: Promise<{ slug: string }>
+};
 
-export default async function PostPage({ params, searchParams }: Props) {
-  const { isEnabled } = draftMode();
-  const { post, morePosts } = await getPostAndMorePosts(params.slug, isEnabled);
+export default async function PostPage({ params }: Props) {
+  const { isEnabled } = await draftMode();
+  const { post, morePosts } = await getPostAndMorePosts((await params).slug, isEnabled);
 
   return (
     <div className="container mx-auto px-5">
