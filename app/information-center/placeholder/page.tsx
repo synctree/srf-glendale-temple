@@ -47,7 +47,7 @@ export default function PlaceholderPage() {
 
           <ContentReferenceCard
             variant="reference"
-            href="https://yogananda.org/srf-world-convocation-overview"
+            href="/information-center/pages/convocation"
             title="SRF World Convocation 2025"
             description="Join thousands of spiritual seekers from around the world for a week of spiritual renewal - June 22-28, 2025"
             imageUrl="https://yogananda.org/craft-public-storage/_1440xAUTO_crop_center-center_90_none/Convocation-Overview-Brother-Bhumananda.jpg"
