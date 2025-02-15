@@ -1,5 +1,6 @@
 import { ExternalLinkCard } from '@/components/ExternalLinkCard'
 import { ExternalReference } from '@/components/ExternalReference'
+import Link from 'next/link'
 
 export default function PlaceholderPage() {
   return (
@@ -90,11 +91,13 @@ export default function PlaceholderPage() {
       </main>
 
       <footer className="fixed bottom-0 left-0 right-0 p-8 flex flex-col items-center gap-4">
-        <img 
-          src="/srf-logo.png" 
-          alt="Self-Realization Fellowship Logo" 
-          className="h-16 w-16"
-        />
+        <Link href="/information-center">
+          <img 
+            src="/srf-logo.png" 
+            alt="Self-Realization Fellowship Logo" 
+            className="h-16 w-16"
+          />
+        </Link>
         <p className="text-xl">Touch anywhere to begin exploring</p>
       </footer>
     </div>
