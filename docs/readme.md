@@ -10,7 +10,7 @@ This repository contains two interconnected web applications:
    - Event information
    - Contact details
 
-2. **Interactive Information Center** (`/kiosk`)
+2. **Interactive Information Center** (`/information-center`)
    - Optimized for 43" 4K touchscreen display
    - Larger touch targets and text
    - Kiosk-specific navigation
@@ -53,13 +53,13 @@ pnpm dev
 
 Access the different versions at:
 - Main website: http://localhost:3000
-- Kiosk version: http://localhost:3000/kiosk
+- Information Center: http://localhost:3000/information-center
 
 ## Deployment
 
 Both versions deploy to the same Vercel instance but serve different purposes:
 - Main website: https://srf-glendale-temple.org
-- Kiosk: https://srf-glendale-temple.org/kiosk
+- Information Center: https://srf-glendale-temple.org/information-center
 
 ## Documentation
 
