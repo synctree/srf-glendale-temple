@@ -9,7 +9,6 @@ export default function SamplePage() {
         imageUrl="/yogananda-awake.jpg"
         imageOnLeft={false}
         href="https://yogananda.org/meditation"
-        qrCallToAction="Scan to learn meditation techniques"
       >
         <div className="text-white">
           <h1 className="text-6xl font-bold mb-8">

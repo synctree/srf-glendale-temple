@@ -39,7 +39,7 @@ export function SplitInformation({
   imageUrl,
   imageOnLeft = false,
   href,
-  qrCallToAction = "Scan to learn more",
+  qrCallToAction = "View on your mobile device",
   children
 }: SplitInformationProps) {
   const contentOrder = imageOnLeft ? 'order-2' : 'order-1';
