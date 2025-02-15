@@ -6,20 +6,15 @@ export default function InformationCenter() {
   return (
     <div className="fixed inset-0 bg-white overflow-hidden" style={{ width: '3840px', height: '2160px' }}>
       <header className="p-12">
-        <div className="flex items-center justify-center gap-8 mb-8">
-          <img 
-            src="/srf-logo.png" 
-            alt="Self-Realization Fellowship Logo" 
-            className="h-32 w-32"
-          />
+        <div className="flex justify-center mb-8">
           <img 
             src="/srf-logo-wide.png" 
-            alt="Self-Realization Fellowship Logo Text" 
-            className="h-24 w-auto"
+            alt="Self-Realization Fellowship Logo" 
+            className="h-32 w-auto"
           />
         </div>
         <h1 className="text-6xl font-bold text-center">
-          Glendale Temple Information Center
+          Glendale Temple
         </h1>
       </header>
 
@@ -95,7 +90,12 @@ export default function InformationCenter() {
         </div>
       </main>
 
-      <footer className="fixed bottom-0 left-0 right-0 p-8 text-center">
+      <footer className="fixed bottom-0 left-0 right-0 p-8 flex flex-col items-center gap-4">
+        <img 
+          src="/srf-logo.png" 
+          alt="Self-Realization Fellowship Logo" 
+          className="h-16 w-16"
+        />
         <p className="text-xl">Touch anywhere to begin exploring</p>
       </footer>
     </div>
