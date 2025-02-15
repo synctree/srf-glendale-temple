@@ -69,7 +69,7 @@ export default function PlaceholderPage() {
                 — Paramahansa Yogananda
               </p>
             </div>
-          </ExternalContent>
+          </ContentReferenceCard>
 
           <ContentReferenceCard
             variant="reference"
@@ -88,7 +88,7 @@ export default function PlaceholderPage() {
                 — Paramahansa Yogananda
               </p>
             </div>
-          </ExternalContent>
+          </ContentReferenceCard>
         </div>
       </main>
 
