@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import QRCode from './QRCode';
 
 interface SplitInformationProps {
   /**
@@ -15,15 +16,30 @@ interface SplitInformationProps {
    */
   imageOnLeft?: boolean;
   /**
+   * Optional href for making the image side clickable
+   */
+  href?: string;
+  /**
+   * Optional call to action text for QR code
+   * @default "Scan to learn more"
+   */
+  qrCallToAction?: string;
+  /**
    * Content to display on the non-image side
    */
   children: ReactNode;
 }
 
+const isExternalUrl = (url: string) => {
+  return /^https?:\/\//.test(url);
+};
+
 export function SplitInformation({
   backgroundColor,
   imageUrl,
   imageOnLeft = false,
+  href,
+  qrCallToAction = "Scan to learn more",
   children
 }: SplitInformationProps) {
   const contentOrder = imageOnLeft ? 'order-2' : 'order-1';
@@ -43,13 +59,24 @@ export function SplitInformation({
       </div>
       
       <div 
-        className={`w-1/2 ${imageOrder}`}
+        className={`w-1/2 ${imageOrder} relative`}
         style={{
           backgroundImage: `url(${imageUrl})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
-      />
+      >
+        {href && isExternalUrl(href) && (
+          <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center">
+            <QRCode 
+              value={href}
+              size={400}
+              className="mb-8"
+            />
+            <p className="text-white text-3xl font-semibold">{qrCallToAction}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
