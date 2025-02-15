@@ -89,6 +89,15 @@ export default function PlaceholderPage() {
               </p>
             </div>
           </ContentReferenceCard>
+
+          <ContentReferenceCard
+            variant="card"
+            href="/information-center/pages/sample"
+            title="Meditation Techniques"
+            description="Learn about the meditation techniques taught in Self-Realization Fellowship"
+            imageUrl="/yogananda-awake.jpg"
+            qrPosition="right"
+          />
         </div>
       </main>
 
