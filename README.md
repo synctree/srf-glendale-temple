@@ -207,7 +207,30 @@ CONTENTFUL_PREVIEW_SECRET=...
 CONTENTFUL_REVALIDATE_SECRET=...
 ```
 
-### Step 6. Run Next.js in development mode
+### Step 6. Set up Contentful CLI and Environment
+
+First, login to Contentful CLI:
+```bash
+contentful login
+```
+
+Then, set your space ID and create a development environment:
+```bash
+contentful space use --space-id $SPACE_ID
+contentful space environment create --environment-id 'dev' --name 'Development'
+```
+
+You can also create a migrations directory if you plan to use Contentful's migration tools:
+```bash
+mkdir migrations
+```
+
+To see available migration commands:
+```bash
+contentful space migration --help
+```
+
+### Step 7. Run Next.js in development mode
 
 ```bash
 npm install
@@ -221,7 +244,7 @@ yarn dev
 
 Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
 
-### Step 7. Try Draft Mode
+### Step 8. Try Draft Mode
 
 In your Contentful space, go to **Settings > Content preview** and add a new content preview for development.
 
@@ -245,7 +268,7 @@ Once saved, go to one of the posts you've created and:
 
 You will now be able to see the updated title. To manually exit Draft Mode, you can navigate to `/api/disable-draft` in the browser.
 
-### Step 8. Deploy on Vercel
+### Step 9. Deploy on Vercel
 
 You can deploy this app to the cloud with [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
 
@@ -263,7 +286,7 @@ This will deploy the Next.js project as well as connect it to your Contentful sp
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fcms-contentful&project-name=nextjs-contentful-blog&repository-name=nextjs-contentful-blog&demo-title=Next.js+Blog&demo-description=Static+blog+with+multiple+authors+using+Draft+Mode&demo-url=https%3A%2F%2Fnext-blog-contentful.vercel.app%2F&demo-image=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Fv1625705016%2Ffront%2Fexamples%2FCleanShot_2021-07-07_at_19.43.15_2x.png&integration-ids=oac_aZtAZpDfT1lX3zrnWy7KT9VA&env=CONTENTFUL_PREVIEW_SECRET,CONTENTFUL_REVALIDATE_SECRET&envDescription=Any%20URL%20friendly%20value%20to%20secure%20Your%20App)
 
-### Step 9. Try using On-Demand Revalidation
+### Step 10. Try using On-Demand Revalidation
 
 In your Contentful space, go to **Settings > Webhooks** and add a new webhook:
 
