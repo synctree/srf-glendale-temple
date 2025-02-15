@@ -1,4 +1,5 @@
 import { SplitInformation } from '@/components/SplitInformation';
+import { InformationCenterFooter } from '@/components/InformationCenterFooter';
 
 export default function SamplePage() {
   return (
@@ -27,6 +28,7 @@ export default function SamplePage() {
           </div>
         </div>
       </SplitInformation>
+      <InformationCenterFooter />
     </div>
   );
 }
