@@ -78,14 +78,29 @@ function HeroPost({
 
 export default async function Page() {
   const { isEnabled } = draftMode();
-  const allPosts = await getAllPosts(isEnabled);
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
+  
+  try {
+    const allPosts = await getAllPosts(isEnabled);
+    
+    if (!allPosts || !Array.isArray(allPosts)) {
+      console.error('Invalid posts data received:', allPosts);
+      return (
+        <div className="container mx-auto px-5">
+          <Intro />
+          <div className="text-center text-red-600 my-8">
+            Failed to load posts. Please check the console for more details.
+          </div>
+        </div>
+      );
+    }
 
-  return (
-    <div className="container mx-auto px-5">
-      <Intro />
-      {heroPost && (
+    const heroPost = allPosts[0];
+    const morePosts = allPosts.slice(1);
+
+    return (
+      <div className="container mx-auto px-5">
+        <Intro />
+        {heroPost && (
         <HeroPost
           title={heroPost.title}
           coverImage={heroPost.coverImage}
