@@ -1,5 +1,6 @@
 import { SplitInformation } from '@/components/SplitInformation';
 import { InformationCenterFooter } from '@/components/InformationCenterFooter';
+import QRCode from '@/components/QRCode';
 
 export default function SamplePage() {
   return (
@@ -24,7 +25,14 @@ export default function SamplePage() {
           <div className="text-2xl">
             <p className="mb-4">• Hong-Sau Technique of Concentration</p>
             <p className="mb-4">• Aum Technique of Meditation</p>
-            <p>• Kriya Yoga</p>
+            <p className="mb-8">• Kriya Yoga</p>
+          </div>
+          <div className="mt-8">
+            <QRCode 
+              value="https://yogananda.org/meditation"
+              size={300}
+              title="Learn to Meditate QR Code"
+            />
           </div>
         </div>
       </SplitInformation>
