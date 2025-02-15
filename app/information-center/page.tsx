@@ -62,6 +62,24 @@ export default function InformationCenter() {
               </p>
             </div>
           </ExternalReference>
+
+          <ExternalReference
+            url="https://yogananda.org/srf-world-convocation-overview"
+            title="SRF World Convocation 2025"
+            description="Join thousands of spiritual seekers from around the world for a week of spiritual renewal - June 22-28, 2025"
+            imageUrl="https://yogananda.org/craft-public-storage/_1440xAUTO_crop_center-center_90_none/Convocation-Overview-Brother-Bhumananda.jpg"
+            qrPosition="right"
+            qrSize={300}
+          >
+            <div className="flex flex-col gap-4">
+              <p className="text-2xl text-white">
+                "They shall come from all parts of the world, thousands and thousands of them... for Self-Realization is bringing the original Christianity of Christ and the original Yoga of India's Krishna so that all people of all religions can follow one highway to the Infinite."
+              </p>
+              <p className="text-xl text-white italic">
+                — Paramahansa Yogananda
+              </p>
+            </div>
+          </ExternalReference>
         </div>
       </main>
 
