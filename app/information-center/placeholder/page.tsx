@@ -9,7 +9,7 @@ export default function PlaceholderPage() {
           <img 
             src="/srf-logo-wide.png" 
             alt="Self-Realization Fellowship Logo" 
-            className="h-96 w-auto"
+            className="h-[800px] w-auto"
           />
         </div>
         <h1 className="text-6xl font-bold text-center">
@@ -18,30 +18,7 @@ export default function PlaceholderPage() {
       </header>
 
       <main className="p-12">
-        <div className="flex gap-8 overflow-x-auto pb-8">
-          <section className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-4xl font-semibold mb-6">Welcome</h2>
-            <p className="text-2xl">
-              Welcome to the Self-Realization Fellowship Glendale Temple. This information center is here to help you learn about our temple, activities, and teachings.
-            </p>
-          </section>
-
-          <section className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-4xl font-semibold mb-6">Today's Schedule</h2>
-            <p className="text-2xl">
-              [Placeholder for daily schedule information]
-            </p>
-          </section>
-
-          <section className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-4xl font-semibold mb-6">Upcoming Events</h2>
-            <p className="text-2xl">
-              [Placeholder for upcoming events]
-            </p>
-          </section>
-        </div>
-
-        <div className="flex gap-12 overflow-x-auto mt-8 pb-8">
+        <div className="flex gap-12 overflow-x-auto pb-8">
           <ContentReferenceCard 
             variant="card"
             href="https://www.youtube.com/watch?v=fBNz5xF-Kx4"
