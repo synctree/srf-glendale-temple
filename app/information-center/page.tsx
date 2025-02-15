@@ -1,5 +1,4 @@
-import { ExternalLinkCard } from '@/components/ExternalLinkCard'
-import { ExternalReference } from '@/components/ExternalReference'
+import { ContentReferenceCard } from '@/components/ContentReferenceCard'
 import Link from 'next/link'
 
 export default function InformationCenter() {
