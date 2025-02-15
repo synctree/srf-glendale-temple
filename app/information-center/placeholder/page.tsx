@@ -1,5 +1,4 @@
-import { ExternalLinkCard } from '@/components/ExternalLinkCard'
-import { ExternalReference } from '@/components/ExternalReference'
+import { ExternalContent } from '@/components/ExternalContent'
 import Link from 'next/link'
 
 export default function PlaceholderPage() {
@@ -43,7 +42,8 @@ export default function PlaceholderPage() {
         </div>
 
         <div className="flex gap-12 overflow-x-auto mt-8 pb-8">
-          <ExternalLinkCard 
+          <ExternalContent 
+            variant="card"
             url="https://www.youtube.com/watch?v=fBNz5xF-Kx4"
             title="Awake: The Life of Yogananda"
             description="Witness the great yogi's own journey to enlightenment, and the challenges and victories along the way."
@@ -52,7 +52,8 @@ export default function PlaceholderPage() {
             qrSize={200}
           />
           
-          <ExternalReference
+          <ExternalContent
+            variant="reference"
             url="https://yogananda.org/meditation"
             title="Learn to Meditate"
             description="Discover ancient meditation techniques taught by Paramahansa Yogananda"
@@ -70,7 +71,8 @@ export default function PlaceholderPage() {
             </div>
           </ExternalReference>
 
-          <ExternalReference
+          <ExternalContent
+            variant="reference"
             url="https://yogananda.org/srf-world-convocation-overview"
             title="SRF World Convocation 2025"
             description="Join thousands of spiritual seekers from around the world for a week of spiritual renewal - June 22-28, 2025"
