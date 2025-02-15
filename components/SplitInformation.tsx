@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import QRCode from './QRCode';
+import Link from 'next/link';
 
 interface SplitInformationProps {
   /**
