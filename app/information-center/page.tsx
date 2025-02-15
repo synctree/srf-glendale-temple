@@ -2,6 +2,7 @@ import { ExternalLinkCard } from '@/components/ExternalLinkCard'
 import { ExternalReference } from '@/components/ExternalReference'
 import Link from 'next/link'
 import Link from 'next/link'
+import Link from 'next/link'
 
 export default function InformationCenter() {
   return (
