@@ -101,16 +101,27 @@ export default async function Page() {
       <div className="container mx-auto px-5">
         <Intro />
         {heroPost && (
-        <HeroPost
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-        />
-      )}
-      <MoreStories morePosts={morePosts} />
-    </div>
-  );
+          <HeroPost
+            title={heroPost.title}
+            coverImage={heroPost.coverImage}
+            date={heroPost.date}
+            author={heroPost.author}
+            slug={heroPost.slug}
+            excerpt={heroPost.excerpt}
+          />
+        )}
+        <MoreStories morePosts={morePosts} />
+      </div>
+    );
+  } catch (error) {
+    console.error('Error in Page component:', error);
+    return (
+      <div className="container mx-auto px-5">
+        <Intro />
+        <div className="text-center text-red-600 my-8">
+          An error occurred while loading the blog posts.
+        </div>
+      </div>
+    );
+  }
 }
