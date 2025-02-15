@@ -108,15 +108,13 @@ export function ContentReferenceCard({
       className="bg-white rounded-xl shadow-lg overflow-hidden"
       style={{ width: containerWidth, height: containerHeight }}
     >
-      <div className={internalHref ? 'cursor-pointer' : ''}>
-        {internalHref ? (
-          <Link href={internalHref} className="block">
-            <ContentDisplay />
-          </Link>
-        ) : (
+      {internalHref ? (
+        <Link href={internalHref} className="block h-full">
           <ContentDisplay />
-        )}
-      </div>
+        </Link>
+      ) : (
+        <ContentDisplay />
+      )}
     </div>
   );
 }
