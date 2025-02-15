@@ -1,3 +1,4 @@
+import { ExternalLink } from '@/components/ExternalLink'
 import Link from 'next/link'
 
 export default function InformationCenter() {
