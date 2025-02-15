@@ -66,7 +66,7 @@ module.exports = function (migration) {
 
   post.editField('excerpt')
     .name('Excerpt')
-    .type('Text');
+    .type('Symbol');
 
   post.editField('content')
     .name('Content')
