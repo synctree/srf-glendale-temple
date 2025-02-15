@@ -1,4 +1,4 @@
-import { QRCode } from './QRCode';
+import QRCode from './QRCode';
 
 interface ExternalLinkProps {
   /**
