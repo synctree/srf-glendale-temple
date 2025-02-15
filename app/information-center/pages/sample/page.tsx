@@ -7,7 +7,7 @@ export default function SamplePage() {
       <SplitInformation
         backgroundColor="#052957"
         imageUrl="/yogananda-awake.jpg"
-        imageOnLeft={true}
+        imageOnLeft={false}
         href="https://yogananda.org/meditation"
         qrCallToAction="Scan to learn meditation techniques"
       >
