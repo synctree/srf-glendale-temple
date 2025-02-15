@@ -1,6 +1,6 @@
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{ backgroundColor: 'rgb(252,252,252)' }}>
       <a href="https://yogananda.org" className="w-full min-h-screen flex flex-col items-center justify-center p-8">
         <img 
           src="/srf-logo-wide.png" 
