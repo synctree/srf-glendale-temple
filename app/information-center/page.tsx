@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 export default function InformationCenter() {
   return (
-    <div className="min-h-screen w-screen bg-gray-100 p-8" style={{ width: '3840px', height: '2160px' }}>
-      <header className="mb-12">
+    <div className="fixed inset-0 bg-gray-100 overflow-hidden" style={{ width: '3840px', height: '2160px' }}>
+      <header className="p-12">
         <h1 className="text-6xl font-bold text-center">
           SRF Glendale Temple Information Center
         </h1>
@@ -32,7 +32,7 @@ export default function InformationCenter() {
         </section>
       </main>
 
-      <footer className="absolute bottom-0 left-0 right-0 p-8 text-center">
+      <footer className="fixed bottom-0 left-0 right-0 p-8 text-center">
         <p className="text-xl">Touch anywhere to begin exploring</p>
       </footer>
     </div>
