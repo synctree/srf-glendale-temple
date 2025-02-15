@@ -1,10 +1,16 @@
 module.exports = function (migration) {
-  // Create Author content type
-  const author = migration.createContentType('author')
-    .name('Author')
-    .displayField('name');
+  // Get or create Author content type
+  let author;
+  try {
+    author = migration.editContentType('author');
+  } catch (e) {
+    author = migration.createContentType('author')
+      .name('Author')
+      .displayField('name');
+  }
 
-  author.createField('name')
+  // Ensure author fields exist
+  author.editField('name')
     .name('Name')
     .type('Symbol')
     .required(true);
@@ -15,12 +21,18 @@ module.exports = function (migration) {
     .linkType('Asset')
     .required(true);
 
-  // Create Post content type
-  const post = migration.createContentType('post')
-    .name('Post')
-    .displayField('title');
+  // Get or create Post content type
+  let post;
+  try {
+    post = migration.editContentType('post');
+  } catch (e) {
+    post = migration.createContentType('post')
+      .name('Post')
+      .displayField('title');
+  }
 
-  post.createField('title')
+  // Ensure post fields exist
+  post.editField('title')
     .name('Title')
     .type('Symbol')
     .required(true);
