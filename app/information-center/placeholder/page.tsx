@@ -1,4 +1,4 @@
-import { ExternalContent } from '@/components/ExternalContent'
+import { ContentReferenceCard } from '@/components/ContentReferenceCard'
 import Link from 'next/link'
 
 export default function PlaceholderPage() {
@@ -42,9 +42,9 @@ export default function PlaceholderPage() {
         </div>
 
         <div className="flex gap-12 overflow-x-auto mt-8 pb-8">
-          <ExternalContent 
+          <ContentReferenceCard 
             variant="card"
-            url="https://www.youtube.com/watch?v=fBNz5xF-Kx4"
+            href="https://www.youtube.com/watch?v=fBNz5xF-Kx4"
             title="Awake: The Life of Yogananda"
             description="Witness the great yogi's own journey to enlightenment, and the challenges and victories along the way."
             imageUrl="/yogananda-awake.jpg"
@@ -52,9 +52,9 @@ export default function PlaceholderPage() {
             qrSize={200}
           />
           
-          <ExternalContent
+          <ContentReferenceCard
             variant="reference"
-            url="https://yogananda.org/meditation"
+            href="https://yogananda.org/meditation"
             title="Learn to Meditate"
             description="Discover ancient meditation techniques taught by Paramahansa Yogananda"
             imageUrl="/yogananda-awake.jpg"
@@ -71,9 +71,9 @@ export default function PlaceholderPage() {
             </div>
           </ExternalContent>
 
-          <ExternalContent
+          <ContentReferenceCard
             variant="reference"
-            url="https://yogananda.org/srf-world-convocation-overview"
+            href="https://yogananda.org/srf-world-convocation-overview"
             title="SRF World Convocation 2025"
             description="Join thousands of spiritual seekers from around the world for a week of spiritual renewal - June 22-28, 2025"
             imageUrl="https://yogananda.org/craft-public-storage/_1440xAUTO_crop_center-center_90_none/Convocation-Overview-Brother-Bhumananda.jpg"
