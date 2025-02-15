@@ -11,8 +11,8 @@ export default function InformationCenter() {
         </h1>
       </header>
 
-      <main className="flex flex-col gap-8 p-12">
-        <div className="grid grid-cols-3 gap-8">
+      <main className="p-12">
+        <div className="flex gap-8 overflow-x-auto pb-8">
           <section className="bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-4xl font-semibold mb-6">Welcome</h2>
             <p className="text-2xl">
@@ -35,7 +35,7 @@ export default function InformationCenter() {
           </section>
         </div>
 
-        <div className="flex flex-col gap-12 items-center mt-8">
+        <div className="flex gap-12 overflow-x-auto mt-8 pb-8">
           <ExternalLinkCard 
             url="https://www.youtube.com/watch?v=fBNz5xF-Kx4"
             title="Awake: The Life of Yogananda"
